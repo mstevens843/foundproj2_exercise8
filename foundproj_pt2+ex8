@@ -1,0 +1,48 @@
+const friend = "BRUTUS";
+const shiftValue = 3; 
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+
+// step 1: Create a function named encryptLetter that takes a letter and a shift value as parameters. This function should return the encrypted version of the letter.
+
+function encryptLetter (letter, shift) {
+    const index = alphabet.indexOf(letter.toLowerCase);
+    const shiftIndex = (index + shift) % alphabet.length;
+    return alphabet[newIndex];    
+}
+
+
+// Step 2: Create a function named encryptMessage that takes a word and a shift value as parameters. This function should return the encrypted version of the entire word. 
+
+function encryptMessage (word, shift) {
+    let encrypedmessage = "";
+    for (let i = 0; i < word.length; i++) {
+        encryptedMessage += encryptLetter(word[i], shift);
+    }
+    return encryptedmessage;
+}
+
+
+// step 3: Create function decryptLetter tha takes encrypted latter and a shift value as parameters. Should return decrypted version of letter.
+
+function decryptLetter (encryptedLetter, shift) {
+    const index = alphabet.indexOf(letter.toLowerCase());
+    const newIndex = (index - shift + alphabet.length) % alphabet.length; 
+    return alphabet[newIndex];
+}
+
+
+
+// step 4: create function named decryptMessage that take encrypted word and a shift value as parameters/ Function should return decrypted version of word. 
+
+function decryptMessage (word, shiftValue) {
+    let decryptedMessage = ""; 
+    for (let i = 0; i < word.length; i++) {
+    decryptedMessage += decryptLetter(word[i], shift);
+    }
+    return decryptedMessage;
+}
+ 
+
+// Q1: If Caesar encrypts the word "BRUTUS" using our encryptMessage function and then decrypts the result using our decryptMessage function,
+// Q1A: Yes, the function will get brutus back after encrypting and decrypting the message. The decrypt functions do the opposite of the encrypt functions, shifting the word back to where it started. 
