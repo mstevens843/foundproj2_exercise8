@@ -5,19 +5,19 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 // step 1: Create a function named encryptLetter that takes a letter and a shift value as parameters. This function should return the encrypted version of the letter.
 
-function encryptLetter (letter, shift) {
+function encryptLetter (letter, shiftValue) {
     const index = alphabet.indexOf(letter.toLowerCase);
-    const shiftIndex = (index + shift) % alphabet.length;
+    const shiftIndex = (index + shiftValue) % alphabet.length;
     return alphabet[newIndex];    
 }
 
 
 // Step 2: Create a function named encryptMessage that takes a word and a shift value as parameters. This function should return the encrypted version of the entire word. 
 
-function encryptMessage (word, shift) {
+function encryptMessage (word, shiftValue) {
     let encrypedmessage = "";
     for (let i = 0; i < word.length; i++) {
-        encryptedMessage += encryptLetter(word[i], shift);
+        encryptedMessage += encryptLetter(word[i], shiftValue);
     }
     return encryptedmessage;
 }
@@ -25,9 +25,9 @@ function encryptMessage (word, shift) {
 
 // step 3: Create function decryptLetter tha takes encrypted latter and a shift value as parameters. Should return decrypted version of letter.
 
-function decryptLetter (encryptedLetter, shift) {
+function decryptLetter (encryptedLetter, shiftValue) {
     const index = alphabet.indexOf(letter.toLowerCase());
-    const newIndex = (index - shift + alphabet.length) % alphabet.length; 
+    const newIndex = (index - shiftValue + alphabet.length) % alphabet.length; 
     return alphabet[newIndex];
 }
 
@@ -38,7 +38,7 @@ function decryptLetter (encryptedLetter, shift) {
 function decryptMessage (word, shiftValue) {
     let decryptedMessage = ""; 
     for (let i = 0; i < word.length; i++) {
-    decryptedMessage += decryptLetter(word[i], shift);
+    decryptedMessage += decryptLetter(word[i], shiftValue);
     }
     return decryptedMessage;
 }
