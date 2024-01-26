@@ -15,7 +15,7 @@ function encryptLetter (letter, shiftValue) {
 // Step 2: Create a function named encryptMessage that takes a word and a shift value as parameters. This function should return the encrypted version of the entire word. 
 
 function encryptMessage (word, shiftValue) {
-    let encrypedmessage = "";
+    let encryptedmessage = "";
     for (let i = 0; i < word.length; i++) {
         encryptedMessage += encryptLetter(word[i], shiftValue);
     }
